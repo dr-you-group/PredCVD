@@ -23,7 +23,7 @@ outcomeName = "outcomeCVD" #The name of column
 outcome <- sev %>% pull(outcomeName) %>% factor(levels = c("no", "yes"))
 
 #### Set variables ####
-catVar <- myvar[-c(2,3,13,14,22)] #chemo included, cancerType excluded
+catVar <- myvar[-c(2,3,8,13,14,22)] #chemo, cancerType excluded
 
 numVar <- c("age")
 
@@ -284,3 +284,23 @@ out$AUC
 
 ## variable importance plot
 plot(varImp(fitXgbFinal))
+
+
+#### Change cut-off #### 
+optimal_lr.eta=function(x){
+  no=which.max(x$res$sens+x$res$spec)[1]
+  result=x$res$lr.eta[no]
+  result
+}
+
+optimalEta <- optimal_lr.eta(out) 
+
+
+b0 <- unname(out$lr$coeff[1])
+b1 <- unname(out$lr$coeff[2])
+threshold = (-log(1/optimalEta-1)-b0)/b1
+
+predOutcomeProb <- predict(fitXgbFinal, newdata = featureTest, type = "prob" )[,2]
+predCutoff <- as.factor(ifelse(predOutcomeProb > threshold, "yes", "no"))
+
+caret::confusionMatrix(predCutoff, outcomeTest, positive = positiveClass)
