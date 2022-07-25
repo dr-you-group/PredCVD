@@ -14,8 +14,6 @@ server <- function(input, output, session) {
     testdata$CRF1 <- ifelse(input$CRF == 1, 1, 0)
     testdata$Dyslipidemia0 <- ifelse(input$Dyslipidemia == 0, 1, 0)
     testdata$Dyslipidemia1 <- ifelse(input$Dyslipidemia == 1, 1, 0)
-    testdata$chemo0 <- ifelse(input$chemo == 0, 1, 0)
-    testdata$chemo1 <- ifelse(input$chemo == 1, 1, 0)
     testdata$Folfox0 <- ifelse(input$Folfox == 0, 1, 0)
     testdata$Folfox1 <- ifelse(input$Folfox == 1, 1, 0)
     testdata$Folfiri0 <- ifelse(input$Folfiri == 0, 1, 0)

@@ -39,10 +39,9 @@ body <- dashboardBody(
                                                   "0 < CACS < = 100" = "1",
                                                   "100 < CACS <= 400" = "2",
                                                   "CACS > 400" = "3")),
-                   numericInput("chemo", "Chemotherapy (yes=1, no=0)", 0, min = 0, max = 1)
+                   numericInput("Folfox", "FOLFOX (yes=1, no=0)", 0, min = 0, max = 1)
             ),
-            column(6, numericInput("Folfox", "FOLFOX (yes=1, no=0)", 0, min = 0, max = 1),
-                   numericInput("Folfiri", "FOLFIRI (yes=1, no=0)", 0, min = 0, max = 1),
+            column(6,numericInput("Folfiri", "FOLFIRI (yes=1, no=0)", 0, min = 0, max = 1),
                    numericInput("Taxene", "Taxene (yes=1, no=0)", 0, min = 0, max = 1),
                    numericInput("Fluorouracil", "Fluorouracil (yes=1, no=0)", 0, min = 0, max = 1),
                    numericInput("Herceptin", "Herceptin (yes=1, no=0)", 0, min = 0, max = 1),

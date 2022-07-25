@@ -3,7 +3,7 @@ library(caret)
 library(xgboost)
 
 
-load(file = "./XGboost_saved.rda")
+load(file = "./xgboost_model_updated.rda")
 load(file = "./age.rda")
-load(file = "./featureName.rda")
+load(file = "./featureName_updated.rda")
 load(file = "./thresholdForModel.rda")
