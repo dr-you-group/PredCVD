@@ -15,9 +15,13 @@ body <- dashboardBody(
       h4("3. Cardiovascular Mortality"),
       linebreaks(1),
       h2("FAQs"),
-      h4("Principal Investigator : Iksung Cho"),
-      h4("Affiliation : Division of Cardiology, Severance Cardiovascular Hospital, Yonsei University College of Medicine"),
-      h4("E-mail : iksungcho@yuhs.ac")
+      h4("Principal Investigator : Min-Jae Cha"),
+      h4("Affiliation : Department of Radiology, Chung-Ang University Hospital, Chung-Ang University College of Medicine"),
+      h4("E-mail : minjaecha@cau.ac.kr"),
+      linebreaks(1),
+      h2("Acknowledgement"),
+      h4("This project was supported by a grant from the National R&D Program for Cancer Control,
+      Ministry of Health & Welfare, Republic of Korea (HA21C0065).")
       
     ),
     
