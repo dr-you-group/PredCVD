@@ -5,9 +5,9 @@ account: sbkim
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 6661695
-bundleId: 6151734
+bundleId: 6160792
 url: https://sbkim.shinyapps.io/shiny_app/
-when: 1659319500.68076
-lastSyncTime: 1659319500.68076
+when: 1659512096.16523
+lastSyncTime: 1659512096.16523
 asMultiple: FALSE
 asStatic: FALSE
